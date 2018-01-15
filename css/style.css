@@ -43,13 +43,6 @@ a {
 .uppercase, section h2, #skills h3, #works .works-box a .works-box-inner .button-readmore {
   text-transform: uppercase; }
 
-/* desktop
--------------------------------------------------------------------------------*/
-@media (min-width: 1025px) {
-  /*Base
-  ---------------------------------------------------------------------------*/
-  a:hover {
-    text-decoration: underline; } }
 /* Header
 -------------------------------------------------------------------------------*/
 .button-contact {
@@ -90,15 +83,6 @@ header .profile-icon {
 header p {
   font-size: 1.6rem; }
 
-@media (min-width: 1025px) {
-  a:hover {
-    text-decoration: underline; }
-
-  /* Header
-  ---------------------------------------------------------------------------*/
-  .button-contact:hover, .button-contact:active {
-    background-color: #4c4c4c;
-    color: #FFF; } }
 /* Contents
 -------------------------------------------------------------------------------*/
 section {
@@ -152,16 +136,6 @@ section {
     font-size: 2.4rem;
     font-weight: bold; }
 
-@media (min-width: 1025px) {
-  a:hover {
-    text-decolation: underline; }
-
-  #skills .container {
-    -webkit-flex-direction: row;
-    flex-direction: row;
-    justify-content: space-between; }
-  #skills .skill-box {
-    margin: 0 10px; } }
 #works {
   padding-bottom: 0; }
   #works h2 {
@@ -211,5 +185,81 @@ section {
           -webkit-border-radius: 4px;
           border-radius: 4px;
           font-size: 1rem; }
+    #works .works-box img {
+      max-width: 100%;
+      display: block; }
+  #works::after {
+    content: '';
+    display: block;
+    clear: both; }
+
+#contact ul {
+  text-align: center;
+  margin-top: 60px; }
+  #contact ul li {
+    display: inline-block;
+    font-size: 2.8rem;
+    text-align: center;
+    margin-right: 20px;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    vertical-align: top; }
+    #contact ul li:last-child {
+      margin-right: 0; }
+  #contact ul .github, #contact ul .skype {
+    font-size: 3.2rem; }
+  #contact ul .github i {
+    margin-left: 2px; }
+  #contact ul a {
+    display: block;
+    width: 50px;
+    height: 50px;
+    color: #FFF;
+    background-color: #14c0c9;
+    -moz-border-radius: 50%;
+    -webkit-border-radius: 50%;
+    border-radius: 50%; }
+
+/* Footer
+-------------------------------------------------------------------------------*/
+footer {
+  background-color: #bea300;
+  padding: 10px 0;
+  text-align: center;
+  color: #FFF; }
+
+@media (min-width: 1025px) {
+  /* Base
+  ------------------------------------------------------------*/
+  a:hover {
+    text-decoration: underline; }
+
+  /* Header
+  ------------------------------------------------------------*/
+  .button-contact:hover, .button-contact:active {
+    background-color: #4c4c4c;
+    color: #FFF; }
+
+  #skills .container {
+    -webkit-flex-direction: row;
+    flex-direction: row;
+    justify-content: space-between; }
+  #skills .skill-box {
+    margin: 0 10px; }
+
+  #works .works-box {
+    width: 33.33333%; }
+    #works .works-box a .works-box-inner {
+      display: none;
+      width: 0%; }
+      #works .works-box a .works-box-inner .button-readmore:hover {
+        background-color: #0f949b; }
+    #works .works-box a:hover .works-box-inner {
+      display: block;
+      width: 100%; }
+
+  #contact ul a:hover {
+    background-color: #0f949b; } }
 
 /*# sourceMappingURL=style.css.map */

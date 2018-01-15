@@ -51,18 +51,6 @@ a {
     text-transform: uppercase;
 }
 
-// desktop
-@media (min-width: 1025px) {
-    
-    /*Base
-    ---------------------------------------------------------------------------*/
-    a {
-        &:hover {
-            text-decoration: underline;
-        }
-    }
-}
-
 /* Header
 -------------------------------------------------------------------------------*/
 .button-contact {
@@ -104,24 +92,6 @@ header {
     }
     p {
         font-size: 1.6rem;
-    }
-}
-
-// desktop
-@media (min-width: 1025px) {
-    a {
-        &:hover {
-            text-decoration: underline;
-        }
-    }
-    
-    /* Header
-    ---------------------------------------------------------------------------*/
-    .button-contact {
-        &:hover, &:active {
-            background-color: $fontColor;
-            color: #FFF;
-        }
     }
 }
 
@@ -181,26 +151,6 @@ section {
         margin-bottom: 10px;
         font-size: 2.4rem;
         font-weight: bold;
-    }
-}
-
-// desktop
-@media (min-width: 1025px) {
-    a {
-        &:hover {
-            text-decolation: underline;
-        }
-    }
-    
-    // Skills
-    #skills {
-        .container {
-            @include flex-direction(row);     // スキルボックスを横に並べる
-            justify-content: space-between;
-        }
-        .skill-box {
-            margin: 0 10px;   // 左右にマージン
-        }
     }
 }
 
@@ -273,37 +223,6 @@ section {
     }
 }
 
-// desktop
-@media (min-width: 1025px) {
-    a {
-        &:hover {
-            text-decolation: underline;
-        }
-    }
-    // Works
-    #works {
-        .works-box {
-            width: (100% / 3);
-            a {
-                .works-box-inner {
-                    display: none;
-                    .button-readmore {
-                        &:hover {
-                            background-color: darken($keyColor, 10%);
-                        }
-                    }
-                }
-                &:hover {
-                    .works-box-inner {
-                        display: block;
-                        width: 100%;
-                    }
-                }
-            }
-        }
-    }
-}
-
 // Contact
 #contact {
     ul {
@@ -346,21 +265,67 @@ footer {
     color: #FFF;
 }
 
-// desktop
+// PC
 @media (min-width: 1025px) {
-    a {
-        &:hover {
-            text-decolation: underline;
-        }
+  /* Base
+  ------------------------------------------------------------*/
+  a {
+    &:hover {
+      text-decoration: underline;
     }
-    // Contact
-    #contact {
-        ul {
-            a {
-                &:hover {
-                    background-color: darken($keyColor, 10%);
-                }
+  }
+
+  /* Header
+  ------------------------------------------------------------*/
+  .button-contact {
+    &:hover, &:active {
+      background-color: $fontColor;
+      color: #FFF;
+    }
+  }
+
+  // Skills
+  #skills {
+    .container {
+      @include flex-direction(row);
+      justify-content: space-between;
+    }
+    .skill-box {
+      margin: 0 10px;
+    }
+  }
+  // Works
+  #works {
+    .works-box {
+      width: (100% / 3);
+      a {
+        .works-box-inner {
+          display: none;
+          width: 0%;
+          .button-readmore {
+            &:hover {
+              background-color: darken($keyColor, 10%);
             }
+          }
         }
+        &:hover {
+          .works-box-inner {
+            display: block;
+            width: 100%;
+          }
+        }
+      }
     }
+  }
+
+  // Contact
+  #contact {
+    ul {
+      a {
+        &:hover {
+          background-color: darken($keyColor, 10%);
+        }
+      }
+    }
+  }
 }
